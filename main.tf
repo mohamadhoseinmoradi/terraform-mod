@@ -14,4 +14,7 @@ module "ec2" {
   ec2_count = 3
   ami_id    = "ami-061ac2e015473fbe2"
   subnet_id = module.vpc.subnet_id
+  vpc_id    = module.vpc.vpc_id
+  src_port = 22
+  dst_port = 22
 }
