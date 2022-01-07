@@ -8,5 +8,8 @@ resource "aws_instance" "sample_instance" {
 
   tags = {
     Name = "EC2-${count.index+1}"
+    ENV = var.common_tags["Environment"]
+    APP = var.common_tags["Application"]
+    Account = var.common_tags["Account"]
   }
 }

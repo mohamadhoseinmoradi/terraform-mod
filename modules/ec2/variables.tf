@@ -13,3 +13,12 @@ variable "ec2_count" {
 variable "subnet_id" {}
 
 variable "sg_id" {}
+
+variable "common_tags" {
+  type = map
+  default = {
+    Environment = "DEV"
+    Application = "MY_APP"
+    Account = "Backend-DEV"
+  }
+}
